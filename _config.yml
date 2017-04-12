@@ -53,12 +53,12 @@ contentful:
 
 page_gen:
   - data: contentful.spaces.blog.blogPost
-    template: blog_post
+    template: post
     name: title
     dir: blog
     extension: html
   - data: contentful.spaces.blog.digestPost
-    template: blog_post
+    template: post
     name: title
     dir: digest
     extension: html

@@ -125,3 +125,11 @@ body {
   height: 200px;
   background-position: center;
 }
+.long-text {
+  .page-title {
+    &__post {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+  }
+}

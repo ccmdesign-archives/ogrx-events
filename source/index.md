@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: feed
 title: GovLab Blog
 ---
 

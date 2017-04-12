@@ -1,0 +1,25 @@
+---
+layout: default
+title: GovLab Blog
+---
+
+<main role="main" class="main-wrapper"> <!-- main content starts here -->
+
+    <aside class="sidebar">
+        <a href="{{site.url}}{{site.baseurl}}/"><h1 class="main-logo">
+          <img src="{{ '/images/govlab-logo-white.png' | absolute_url}}" alt="">
+      </h1></a>
+      {% include sidebar.html %}
+  </aside>
+
+  <section class="main-content long-text docs">
+    <h1 class="page-title page-title__post">{{page.title}}</h1>
+    <div class="post">
+      <!-- <h1>{{page.title}}</h1> -->
+      <p><b>{{page.postDate | date: "%m/%d/%Y"}}</b></p>
+      <p>{{page.postContent | markdownify}}</p>
+      <a class="button" href="{{site.url}}{{site.baseurl}}/">Back to Blog</a>
+  </div>
+</section>
+</main>
+
