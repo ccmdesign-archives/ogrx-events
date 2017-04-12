@@ -109,3 +109,19 @@ body {
     line-height: 1;
   }
 }
+
+.docs {
+  .post {
+    margin-bottom: 40px;
+    h1 a {
+      &:hover {
+        text-decoration: none;
+        color: $main-color;
+      }
+    }
+  }
+}
+.post-image {
+  height: 200px;
+  background-position: center;
+}

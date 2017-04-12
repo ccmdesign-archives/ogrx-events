@@ -50,6 +50,19 @@ contentful:
           include: 10
           limit: 1000
 
+
+page_gen:
+  - data: contentful.spaces.blog.blogPost
+    template: blog_post
+    name: title
+    dir: blog
+    extension: html
+  - data: contentful.spaces.blog.digestPost
+    template: blog_post
+    name: title
+    dir: digest
+    extension: html
+
 # page_gen:
 #   - data: 'portfolio'
 #     template: 'project-template'

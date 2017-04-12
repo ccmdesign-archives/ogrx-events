@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: API Documentation
+title: GovLab Blog
 ---
 
 

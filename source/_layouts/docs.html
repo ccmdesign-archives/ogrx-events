@@ -1,24 +1,36 @@
 ---
 layout: default
-title: API Documentation
+title: GovLab Blog
 ---
 
 <main role="main" class="main-wrapper"> <!-- main content starts here -->
 
-<aside class="sidebar">
-<h1 class="main-logo">
-  <img src="{{ '/images/govlab-logo-white.png' | absolute_url}}" alt="">
-  Docs
-</h1>
-{% include sidebar.html %}
-</aside>
+    <aside class="sidebar">
+        <a href="{{site.url}}{{site.baseurl}}/"><h1 class="main-logo">
+          <img src="{{ '/images/govlab-logo-white.png' | absolute_url}}" alt="">
+      </h1></a>
+      {% include sidebar.html %}
+  </aside>
 
-<section class="main-content long-text docs">
-  <h1 class="page-title">{{page.title}}</h1>
-  {% for doc in site.docs %}
-  <h1>{{doc.title}}</h1>
-  {{doc.content}}
-  {% endfor %}
-</section>
+  <section class="main-content long-text docs">
+      <h1 class="page-title">{{page.title}}</h1>
+      {% for post in site.data.contentful.spaces.blog.blogPost %}
+      <div class="post">
+          <h1><a href="{{site.url}}{{site.baseurl}}/blog/{{post.title | slugify}}.html">{{post.title}}</a></h1>
+          <p><b>{{post.postDate | date: "%m/%d/%Y"}}</b> by <b>{{post.author}}</b></p>
+          <div class="post-image" style="background-image: url('{{post.postImages[0].url}}')"></div>
+          <p>{{post.postSummary}}</p>
+          <a class="button" href="{{site.url}}{{site.baseurl}}/blog/{{post.title | slugify}}.html">Read More</a>
+      </div>
+      {% endfor %}
+      {% for post in site.data.contentful.spaces.blog.digestPost %}
+      <div class="post">
+          <h1><a href="{{site.url}}{{site.baseurl}}/digest/{{post.title | slugify}}.html">{{post.title}}</a></h1>
+          <p><b>{{post.postDate | date: "%m/%d/%Y"}}</b></p>
+          {{post.postContent | truncatewords: 100 | markdownify}}
+          <a class="button" href="{{site.url}}{{site.baseurl}}/digest/{{post.title | slugify}}.html">Read More</a>
+      </div>
+      {% endfor %}
+  </section>
 </main>
 

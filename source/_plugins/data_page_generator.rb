@@ -9,7 +9,11 @@ module Jekyll
       if(name.is_a? Integer)
         return name.to_s
       end
-      return name.downcase.strip.gsub(' ', '-').gsub(/[^\w.-]/, '')
+      if (name.nil?)
+        return ""
+      else
+        return name.downcase.strip.gsub(' ', '-').gsub('ú', 'u').gsub(/[^\w.-]/, '')
+      end
     end
   end
 
@@ -42,6 +46,7 @@ module Jekyll
         @dir = dir
         @name = filename + "." + extension.to_s
       end
+
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), template + ".html")
@@ -127,4 +132,3 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::DataPageLinkGenerator)
-
