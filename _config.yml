@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 
-email: 
+title:
+email:
 description: > # this means to ignore newlines until "baseurl:"
-  
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://govlab.github.io/govlab-docs-template" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  
+twitter_username:
+github_username:
 
 # Build settings
 markdown: kramdown
@@ -38,6 +38,17 @@ source: ./source
 
 collections:
 - docs
+
+contentful:
+  spaces:
+    - blog:
+        space: 6guumcycw6jo
+        access_token: 99f3b3a28764c9bec785953db09c604b61518fc0dc6907038b5866ea79d6e5e1
+        base_path: source
+        all_entries: true
+        cda_query:
+          include: 10
+          limit: 1000
 
 # page_gen:
 #   - data: 'portfolio'
