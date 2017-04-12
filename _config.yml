@@ -17,7 +17,7 @@ title:
 email:
 description: > # this means to ignore newlines until "baseurl:"
 
-baseurl: "govlab-blog" # the subpath of your site, e.g. /blog
+baseurl: "/govlab-blog" # the subpath of your site, e.g. /blog
 url: "https://govlab.github.io/govlab-docs-template" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
