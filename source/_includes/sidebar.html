@@ -1,12 +1,10 @@
 <section class="sidebar-list">
 <ul class="animate">
-{% for i in site.data.titles %}
-  <li><a class="js-trigger" href="#{{i.title | slugify}}">{{i.title}}</a>
-    {% if i.subtitles %}
+  <li><a class="js-trigger" href="#blog">Blog</a>
       <ul class="animate">
-        {% for j in i.subtitles %}
-          <li class="animate"><a class="js-trigger" href="#{{j.title | slugify}}">{{j.title}}</a>
-          {% if j.subtitles %}
+        {% for j in site.data.contentful.spaces.blog.blogPost %}
+          <li class="animate"><a class="js-trigger" href="{{site.url}}{{site.baseurl}}/blog/{{j.title | slugify}}.html">{{j.title}}</a>
+<!--           {% if j.subtitles %}
             <ul class="animate">
               {% for k in j.subtitles %}
                 <li class="animate"><a class="js-trigger" href="#{{k.title | slugify}}">{{k.title}}</a>
@@ -19,10 +17,14 @@
                 {% endif %}
               {% endfor %}
             </ul>
-          {% endif %}
+          {% endif %} -->
         {% endfor %}
       </ul>
-    {% endif %}
-{% endfor %}
+  <li><a class="js-trigger" href="#digest">Digest</a>
+      <ul class="animate">
+        {% for j in site.data.contentful.spaces.blog.digestPost %}
+          <li class="animate"><a class="js-trigger" href="{{site.url}}{{site.baseurl}}/digest/{{j.title | slugify}}.html">{{j.title}}</a>
+        {% endfor %}
+      </ul>
 </ul>
 </section>
