@@ -14,7 +14,7 @@ $(function () {
         // handler to apply class when image fully loaded
         $(img).on('load', function(){
             var ar = img.width / img.height;
-            if (ar > 1 + threshold) {
+            if (ar >= 1 + threshold) {
                 $e.addClass( 'landscape' );
             } else {
                 $e.addClass( 'portrait' );
