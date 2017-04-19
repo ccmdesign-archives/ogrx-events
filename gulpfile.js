@@ -34,6 +34,7 @@ gulp.task('push-gh-pages', function () {
 
 gulp.task('deploy', function (callback) {
   runSequence(
+    'jekyll-prod',
     'image',
     'push-gh-master',
     'push-gh-pages',
@@ -43,6 +44,7 @@ gulp.task('deploy', function (callback) {
 
 gulp.task('jekyll', shell.task(['bundle exec jekyll build --incremental']));
 gulp.task('jekyll-force', shell.task(['bundle exec jekyll build']));
+gulp.task('jekyll-prod', shell.task(['bundle exec jekyll build --config=_config.yml,_config_prod.yml']));
 
 gulp.task('jekyll-rebuild', ['jekyll'], function () {
     browserSync.reload();
