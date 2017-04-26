@@ -1,5 +1,4 @@
-// $main-color: #18fce3;
-$main-color: #523080;
+
 
 * {
   box-sizing: border-box;
@@ -10,13 +9,13 @@ body {
 }
 
 .main-wrapper {
-  padding-left: 320px;
+  padding-left: 300px;
 
 }
 
 .sidebar {
   height: 100vh;
-  background-color: darken($main-color, 20);
+  background-color: #333;
   width: 300px;
   padding-top: 40px;
   position: fixed;
@@ -24,6 +23,7 @@ body {
   top: 0;
   bottom: 0;
   overflow-y: scroll;
+  box-shadow: 2px 2px 8px rgba(black, .2);
 }
 
 .main-logo {
@@ -41,8 +41,11 @@ body {
     margin-left: 60px;
   }
 
-}
+  > span {
+    opacity: .4;
+  }
 
+}
 
 
 .long-text {
@@ -110,7 +113,6 @@ body {
   }
 }
 
-.docs {
   .post {
     margin-bottom: 40px;
     h1 a {
@@ -123,7 +125,7 @@ body {
       &.landscape {
         display: block;
         margin: 40px auto;
-        max-width: 80%;
+        max-width: 100%;
       }
       &.portrait {
         margin: 30px 40px 30px 0;
@@ -132,7 +134,7 @@ body {
       }
     }
   }
-}
+
 .post-image {
   height: 200px;
   background-position: center;
@@ -143,5 +145,23 @@ body {
       font-size: 3rem;
       margin-bottom: 40px;
     }
+  }
+}
+
+#back-button {
+  position: absolute;
+  top: 40px;
+  left: 340px;
+  border-radius: 50%;
+  height: 72px;
+  width: 72px;
+  border: 1px solid rgba(white, .2);
+  padding: 10px;
+  color: rgba(white, .2);
+  > i { font-size: 3rem; }
+
+  &:hover {
+    border: 1px solid rgba(white, 1);
+    color: white;
   }
 }

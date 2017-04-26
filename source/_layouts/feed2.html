@@ -1,0 +1,32 @@
+---
+layout: default
+title: GovLab Blog
+---
+
+<main role="main" class="main-wrapper"> <!-- main content starts here -->
+
+    <aside class="sidebar">
+        <a href="{{site.url}}{{site.baseurl}}/"><h1 class="main-logo">
+          <img src="{{ '/images/govlab-logo-white.png' | absolute_url}}" alt="">
+          <span>Blog</span>
+      </h1></a>
+      {% include sidebar.html %}
+  </aside>
+
+  <section class="top-section top-section--main-color">
+    <h1>Category Name</h1>
+    <h3>category Tagline, or any other text we would like to have here</h3>
+  </section>
+
+  <section class="post-list">
+      {% for post in site.data.contentful.spaces.blog.blogPost %}
+      <a class="post-item post-list__item" href="{{site.url}}{{site.baseurl}}/blog/{{post.title | slugify}}.html">
+        <p class="post-item__date">{{post.postDate | date: "%b %d, %Y" }}</p>
+        <h1>{{post.title}}</h1>
+        <p>By {{post.author}}</p>
+        <p class="post-item__summary">{{post.postSummary}}</p>
+      </a>
+      {% endfor %}
+  </section>
+</main>
+

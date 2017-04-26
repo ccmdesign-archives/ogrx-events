@@ -9,12 +9,13 @@ $medium-up: 40.063em;
 $large: 64.063em;
 
 // Colors
-// $main-color: ;
-
+$main-color: #523080;
 
 @import 'breakpoint';
 @import 'utils';
 @import 'base';
+@import 'styleguide-patch';
+@import 'post-list';
 @import 'sidebar-list';
 
 
