@@ -1,2 +1,2 @@
-baseurl: "/govlab-blog" # the subpath of your site, e.g. /blog
-url: "https://govlab.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ogrx-events" # the subpath of your site, e.g. /blog
+url: "https://ccmdesign.github.io" # the base hostname & protocol for your site, e.g. http://example.com
