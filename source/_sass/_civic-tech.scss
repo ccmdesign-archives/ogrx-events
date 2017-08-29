@@ -1,11 +1,19 @@
 .ct-event {
-
 .top-section {
-  h2 { margin-bottom: 0; } 
-  h3 { margin-top: 0; }
+  h2, h3, h4, h5 { margin: 0; }
+
+  h2 { margin-top: 40px; } 
+  h5 { margin-bottom: 40px; } 
+  
+  
   img {
     max-width: 260px;
     margin-top: 30px;
+  }
+
+  @include breakpoint($small-only) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -16,11 +24,15 @@
 
 .ct-event-info {
   background-color: rgba(black, .8);
-  text-align: right;
+  text-align: center;
   color: white;
   padding: 30px;
-  margin-right: 50px;
   height: 100%;
+
+  @include breakpoint($large) {
+    text-align: right;  
+    padding-right: 50px;
+  }
 
   h2, h3, h4 {
     margin: 0;
@@ -39,7 +51,11 @@
   }
 }
 
-.ct-description { max-width: 800px; }
+.ct-description { 
+  // max-width: 800px;
+  @include breakpoint($small-only) { padding: 0 20px; }
+  @include breakpoint($medium-up) { padding: 0 40px; }
+}
 
 .ct-speakers {
   text-align: center;
@@ -74,7 +90,13 @@
   }
 }
 
-
+.book-cover {
+  text-align: center;
+  @include breakpoint($large) {
+    position: relative;
+    top: -20%;
+  }
+}
 
 
 
