@@ -337,3 +337,10 @@ body {
     .ct-event .book-cover {
       position: relative;
       top: -20%; } }
+.ct-event .partner-logo {
+  text-align: center; }
+  .ct-event .partner-logo img {
+    max-width: 180px; }
+    @media (max-width: 64em) {
+      .ct-event .partner-logo img {
+        margin: 20px; } }
