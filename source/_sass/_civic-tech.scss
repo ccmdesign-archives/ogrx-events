@@ -98,7 +98,14 @@
   }
 }
 
+.partner-logo {
+  text-align: center;
 
+  img {
+    max-width: 180px;
+    @include breakpoint($touch) { margin: 20px; }
+  }
+}
 
 
 
