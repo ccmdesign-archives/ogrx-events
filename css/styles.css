@@ -266,23 +266,32 @@ body {
 .sidebar-list li li {
   background-color: rgba(0, 0, 0, 0.1); }
 
+.ct-event .top-section h2, .ct-event .top-section h3, .ct-event .top-section h4, .ct-event .top-section h5 {
+  margin: 0; }
 .ct-event .top-section h2 {
-  margin-bottom: 0; }
-.ct-event .top-section h3 {
-  margin-top: 0; }
+  margin-top: 40px; }
+.ct-event .top-section h5 {
+  margin-bottom: 40px; }
 .ct-event .top-section img {
   max-width: 260px;
   margin-top: 30px; }
+@media (max-width: 40em) {
+  .ct-event .top-section {
+    padding-left: 20px;
+    padding-right: 20px; } }
 .ct-event .page-section:first-of-type {
   padding-top: 0;
   padding-bottom: 0; }
 .ct-event .ct-event-info {
   background-color: rgba(0, 0, 0, 0.8);
-  text-align: right;
+  text-align: center;
   color: white;
   padding: 30px;
-  margin-right: 50px;
   height: 100%; }
+  @media (min-width: 64.063em) {
+    .ct-event .ct-event-info {
+      text-align: right;
+      padding-right: 50px; } }
   .ct-event .ct-event-info h2, .ct-event .ct-event-info h3, .ct-event .ct-event-info h4 {
     margin: 0;
     line-height: 1; }
@@ -293,8 +302,12 @@ body {
     font-weight: 400;
     font-size: 1.5rem;
     margin-top: 10px; }
-.ct-event .ct-description {
-  max-width: 800px; }
+@media (max-width: 40em) {
+  .ct-event .ct-description {
+    padding: 0 20px; } }
+@media (min-width: 40.063em) {
+  .ct-event .ct-description {
+    padding: 0 40px; } }
 .ct-event .ct-speakers {
   text-align: center; }
 .ct-event .ct-speaker {
@@ -318,3 +331,9 @@ body {
   .ct-event .button--border:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: white; }
+.ct-event .book-cover {
+  text-align: center; }
+  @media (min-width: 64.063em) {
+    .ct-event .book-cover {
+      position: relative;
+      top: -20%; } }
