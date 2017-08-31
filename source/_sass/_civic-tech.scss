@@ -54,7 +54,7 @@
 .ct-description { 
   // max-width: 800px;
   @include breakpoint($small-only) { padding: 0 20px; }
-  @include breakpoint($medium-up) { padding: 0 40px; }
+  @include breakpoint($medium-up) { padding: 30px 50px; }
 }
 
 .ct-speakers {
