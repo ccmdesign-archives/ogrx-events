@@ -307,7 +307,7 @@ body {
     padding: 0 20px; } }
 @media (min-width: 40.063em) {
   .ct-event .ct-description {
-    padding: 0 40px; } }
+    padding: 30px 50px; } }
 .ct-event .ct-speakers {
   text-align: center; }
 .ct-event .ct-speaker {
