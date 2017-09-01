@@ -165,6 +165,38 @@ body {
     border: 1px solid white;
     color: white; }
 
+.top-bar__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px;
+  color: white;
+  cursor: pointer; }
+  .top-bar__logo em {
+    font-weight: 300; }
+  .top-bar__logo:hover {
+    text-decoration: none;
+    color: white; }
+  .top-bar__logo__desktop {
+    display: block; }
+  .top-bar__logo__mobile {
+    display: none; }
+  @media (max-width: 600px) {
+    .top-bar__logo__desktop {
+      display: none; }
+    .top-bar__logo__mobile {
+      display: block; } }
+
+.top-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10; }
+
+.top-section {
+  margin-top: -50px;
+  padding-top: 120px; }
+
 .top-section--main-color {
   background-color: #523080; }
 
